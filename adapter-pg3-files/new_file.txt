@@ -1,0 +1,6 @@
+#written by FileProperties
+#Thu Sep 08 17:59:12 CST 2022
+day=21
+year=2004
+month=4
+my=ambitious

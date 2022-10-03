@@ -1,0 +1,32 @@
+package pg2_product1.framework;
+
+/**
+ * @author ambitious
+ * @description 抽象出来的产品接口，可克隆
+ * @date 2022/10/3 下午6:01
+ */
+public abstract class Product implements Cloneable {
+
+    /**
+     * 产品具体如何使用
+     * @param s 用于展示的核心字符串
+     */
+    public abstract void use(String s);
+
+    /**
+     * 创建出当前实例的克隆实例，提供一个默认实现
+     * @return 创建出来的实例
+     */
+    public Product createClone() {
+        return clone();
+    }
+
+    @Override
+    public Product clone() {
+        try {
+            return (Product) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
+}
